@@ -26,6 +26,10 @@ Parameters:
 
 Example: HIDXfil.exe /message "Hello World" /vid D3C0 /pid D34D /chunksize 8
 ```
+A chunksize of 8 was set to ensure the best results. Changing this value may result in missing data and corrupted files.
+Generally, any TCP Listener can be used to retreive the data sent by the O.MG device. 
+
+Netcat may be your first choice: `nc -lvnp <port> / nc -lvnp <port> > example.file`
 
 ## Disclaimer
 By using the provided code, you agree to the following terms:
