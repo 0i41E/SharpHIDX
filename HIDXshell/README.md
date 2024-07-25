@@ -4,6 +4,8 @@
 By identifying the device via its VID and PID, it opens a communication channel to send commands, executes them on the target system, and handles the output or feedback. 
 **HIDXShell** is particularly useful in environments where network-based access is restricted or monitored.
 
+![HIDXShell](https://github.com/user-attachments/assets/1c047ab0-45e0-4b9b-b0e9-4dd34db7113d)
+
 ## Usage
 The Usage of the provided project is pretty much self explanatory.
 After successfully compiling the project, the binary can simply be used on a Windows Target system. 
