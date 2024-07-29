@@ -210,10 +210,10 @@ namespace HIDXExfil
                     if (!string.IsNullOrEmpty(filePath))
                     {
                         FileInfo fileInfo = new FileInfo(filePath);
-                        if (fileInfo.Length > 8192) // Check if file size is greater than 8KB
+                        if (fileInfo.Length > 3072) // Check if file size is greater than 3KB for warning message
                         {
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("[?] Transfering larger files may take some time and can result in corrupted files.");
+                            Console.WriteLine("[?] Transfering files may take some time and can result in corrupted files.");
                             Console.ResetColor();
                         }
                         byte[] fileContent = File.ReadAllBytes(filePath);
@@ -221,7 +221,8 @@ namespace HIDXExfil
                     }
                     else
                     {
-                        byte[] payload = System.Text.Encoding.ASCII.GetBytes($"{message}\n");
+                          //byte[] payload = System.Text.Encoding.UTF8.GetBytes($"{message}\n");
+			    byte[] payload = System.Text.Encoding.UTF8.GetBytes($"{message}\n");
                         SendMessage(fileHandle, payload, chunksize);
                     }
                 }
