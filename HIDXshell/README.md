@@ -32,6 +32,25 @@ Example: HIDXShell.exe /vid D3C0 /pid D34D /powershell
 ```
 **HIDXShell** gives you the freedom to choose between different CLI options. While the default `cmd` instance is the the faster one and may be sufficient for most users, `/powershell` opens up more functionalities and a full blown PowerShell. The drawback comes with the way PowerShell is executed. Users may be impacted by reduced speed. 
 
+## Running HIDXShell Through PowerShell
+While there are PowerShell scripts providing remote-access via HIDX StealthLink, **HIDXShell.exe** may introduce more functionalities. If you do want to run it through PowerShell though, considere the following steps:
+
+If you want to run **HIDXShell** in-memory through a PowerShell wrapper, first compile **HIDXShell** and encode the resulting binary into base64:
+
+`$base64 = [Convert]::ToBase64String([IO.File]::ReadAllBytes("<Path to .exe>"))`
+
+**HIDXShell** can then be loaded in a PowerShell script with the following:
+
+`$AssemblyLoad = [System.Reflection.Assembly]::Load([Convert]::FromBase64String($base64))`
+
+Afterwards, identify the entry point:
+
+`$EntryPoint = $AssemblyLoad.GetTypes().Where({ $_.Name -eq 'Program' }, 'First').GetMethod('Main', [Reflection.BindingFlags] 'Static, Public, NonPublic')`
+
+Executing the loaded assembly then can be achieved like this (If you do need to define multiple arguments, seperate them via `,`):
+
+`$EntryPoint.Invoke($null, (, [string[]] ('<Argument(s)>')))`
+
 ## Disclaimer
 By using the provided code, you agree to the following terms:
 
