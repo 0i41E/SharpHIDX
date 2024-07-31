@@ -4,7 +4,7 @@
 By identifying the device via its VID and PID, it opens a communication channel to send commands, executes them on the target system, and handles the output or feedback. 
 **HIDXShell** is particularly useful in environments where network-based access is restricted or monitored.
 
-![HIDXShell](https://github.com/user-attachments/assets/1c047ab0-45e0-4b9b-b0e9-4dd34db7113d)
+![hidxshell-diagram](https://github.com/user-attachments/assets/58ee0179-7280-4fdf-b770-e82f7c9fa08f)
 
 ## Usage
 The Usage of the provided project is pretty much self explanatory.
