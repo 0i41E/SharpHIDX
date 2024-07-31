@@ -1,7 +1,7 @@
 # HIDXfil
 **HIDXfil** is a tool designed to exfiltrate data through a Human Interface Device (HID). This can be useful for scenarios where traditional network-based exfiltration methods are restricted or monitored. This tool can send messages, clipboard content, or whole files to a specified USB device using its Vendor ID (VID) and Product ID (PID). **HIDXfil** is designed to work with HIDX StealthLink, a feature for [O.MG Elite devices](https://shop.hak5.org/collections/mischief-gadgets).
 
-![hidxfil](https://github.com/user-attachments/assets/5f6eb9c3-48fa-41e8-b2ce-23d3aaf0ea04)
+![hidxfil-diagram](https://github.com/user-attachments/assets/c81d75dd-e603-4d98-b3fe-6a29398a7e3f)
 
 ## Usage
 I'm not planning on releasing binaries for HIDXfil, so you will have to compile yourself :)
