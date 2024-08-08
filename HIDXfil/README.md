@@ -35,7 +35,14 @@ Generally, any TCP Listener can be used to retreive the data sent by the O.MG de
 
 _Exfiltrating files is not as reliable as pure "text-based" input. Depending on size and filetype it may need multiple tries and different chunk sizes to successfully retrieve the file._
 
-Netcat may be your first choice: `nc -lvnp <port>` / `nc -lvnp <port> > example.file`
+Netcat may be your first choice: `nc -lvnp <port>` 
+
+![xfil](https://github.com/user-attachments/assets/00e59277-0bf8-4b74-bb9e-c744e1d64af2)
+
+`nc -lvnp <port>  > example.file`
+
+![xfil2](https://github.com/user-attachments/assets/28cd43a9-690b-4318-bd3c-7f728b31fbc3)
+
 
 ## Running HIDXfil Through PowerShell
 While there are PowerShell scripts provoding exfiltration via HIDX StealthLink, **HIDXfil.exe** may introduce more functionalities. If you do want to run it through PowerShell though, considere the following steps:
