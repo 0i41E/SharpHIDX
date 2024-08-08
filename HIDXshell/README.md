@@ -7,6 +7,8 @@ By identifying the device via its VID and PID, it opens a communication channel 
 ![hidxshell-diagram](https://github.com/user-attachments/assets/58ee0179-7280-4fdf-b770-e82f7c9fa08f)
 
 ## Usage
+I'm not planning on releasing binaries for HIDXfil, so you will have to compile yourself :)
+
 The Usage of the provided project is pretty much self explanatory.
 After successfully compiling the project, the binary can simply be used on a Windows Target system. 
 As a listener, Mischief Gadgets [Universal Python Listener](https://github.com/O-MG/O.MG-Firmware/blob/stable/tools/HIDX/python/stealthlink-client-universal.py) is highly recommended, as it handles certain quirks required for a smooth experience. 
