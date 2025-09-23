@@ -1,5 +1,5 @@
 ﻿/*	
-Author: Ø1phor1³ (@01p8or13)
+Author: Ø1 (@01p8or13)
 Acknowledgements: spiceywasabi, rogandawes, Kalani
 	
 https://github.com/0i41E
@@ -259,7 +259,7 @@ namespace HIDXExfil
 \_| |_/\___/|___/ \/   \/ \____/ \__\___|\__,_|_|\__|_| |_| \_____/_|_| |_|_|\_\
 ";
             Console.WriteLine(text);
-            Console.WriteLine("HID-Based Exfiltration Tool by Ø1phor1³");
+            Console.WriteLine("HID-Based Exfiltration Tool by Ø1");
             Console.WriteLine();
             Console.WriteLine("Usage: HIDXfil.exe /message <Message> /clipboard /file <File Path> /vid <VendorID> /pid <ProductID> /chunksize <chunksize>");
             Console.WriteLine();

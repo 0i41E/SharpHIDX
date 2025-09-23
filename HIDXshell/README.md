@@ -20,7 +20,7 @@ As a listener, Mischief Gadgets [Universal Python Listener](https://github.com/O
 | | | |_| |_| |/ // /^\ \ /\__/ / ||  __/ (_| | | |_| | | | | |___| | | | |   <
 \_| |_/\___/|___/ \/   \/ \____/ \__\___|\__,_|_|\__|_| |_| \_____/_|_| |_|_|\_\
 
-HID-Based Remote Access Tool by Ø1phor1³
+HID-Based Remote Access Tool by Ø1
 
 Usage: HIDXShell.exe /vid <VendorID> /pid <ProductID> /powershell /verbose
 

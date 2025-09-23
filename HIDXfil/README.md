@@ -16,7 +16,7 @@ After successfully compiling the project, the binary can simply be used on a Win
 | | | |_| |_| |/ // /^\ \ /\__/ / ||  __/ (_| | | |_| | | | | |___| | | | |   <
 \_| |_/\___/|___/ \/   \/ \____/ \__\___|\__,_|_|\__|_| |_| \_____/_|_| |_|_|\_\
 
-HID-Based Exfiltration Tool by Ø1phor1³
+HID-Based Exfiltration Tool by Ø1
 
 Usage: HIDXfil.exe /message <Message> /clipboard /vid <VendorID> /pid <ProductID> /chunksize <chunksize> /file <filepath>
 
