@@ -7,7 +7,7 @@ By identifying the device via its VID and PID, it opens a communication channel 
 ![hidxshell-diagram](https://github.com/user-attachments/assets/58ee0179-7280-4fdf-b770-e82f7c9fa08f)
 
 ## Usage
-I'm not planning on releasing binaries for HIDXfil, so you will have to compile yourself :)
+I'm not planning on releasing binaries for HIDXShell, so you will have to compile yourself :)
 
 The Usage of the provided project is pretty much self explanatory.
 After successfully compiling the project, the binary can simply be used on a Windows Target system. 
@@ -65,3 +65,4 @@ By using the provided code, you agree to the following terms:
 4.  **No Liability**: The creator shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages.
 
 By using this code, you acknowledge that you have read and understood this disclaimer and agree to be bound by its terms.
+
